@@ -9,7 +9,9 @@ type ViewerProps = {
 };
 
 const Viewer: React.FC<ViewerProps> = ({ markdown }) => {
-	return <ReactMarkdown children={markdown} remarkPlugins={remarkPlugins} />;
+	return (
+		<ReactMarkdown remarkPlugins={remarkPlugins}>{markdown}</ReactMarkdown>
+	);
 };
 
 export default Viewer;
